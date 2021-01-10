@@ -14,7 +14,7 @@ const Navegar: React.FC<Props> = ({
     return (
         <nav className='navbar navbar-expand-lg navbar-dark static-top'>
             <div className='container-fluid'>
-                <section className='navbar-brand'>{nome}</section>
+                <a className='navbar-brand' href='/'>{nome}</a>
                 <button
                     className='navbar-toggler'
                     type='button'
@@ -33,13 +33,13 @@ const Navegar: React.FC<Props> = ({
                 >
                     <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                     <li className='nav-item'>
-                            <a className='nav-link' href='/'>Contato</a>
+                            <a className='nav-link' href='#contato'>Contato</a>
                         </li>
                         <li className='nav-item'>
-                            <a className='nav-link' href='/'>Serviços</a>
+                            <a className='nav-link' href='#serviços'>Serviços</a>
                         </li>
                         <li className='nav-item'>
-                            <a className='nav-link' href='/'>Sobre</a>
+                            <a className='nav-link' href='#sobre'>Sobre</a>
                         </li>
                     </ul>
                 </div>

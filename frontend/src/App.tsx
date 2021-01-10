@@ -3,6 +3,7 @@ import ReactNotifications from 'react-notifications-component';
 
 import Contato from './components/contato';
 import Navegar from './components/navegar';
+import Portfolio from './components/portfolio';
 import Rodape from './components/rodape';
 import Serviços from './components/servicos';
 import Sobre from './components/sobre';
@@ -19,6 +20,7 @@ const App: React.FC = () => {
             <Sobre />
             <Valores />
             <Serviços />
+            <Portfolio />
             <Contato
                 localização='São Paulo, SP'
                 emailContato='company@email.com'

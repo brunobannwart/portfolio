@@ -40,7 +40,7 @@ const Contato: React.FC<Props> = ({
     }
 
     return (
-        <div className='contact'>
+        <div id='contato' className='contact'>
             <div className='container-fluid'>
                 <h3 className='text-center'>Contato</h3>
                 <div className='row'>

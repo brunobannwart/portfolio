@@ -13,7 +13,7 @@ const Valores: React.FC = () => {
                     <div className='col-sm-8'>
                         <h2>Nossos valores</h2>
                         <br />
-                        <h4>
+                        <h5>
                             <strong>Missão: </strong>
                             Nossa missão Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
@@ -22,7 +22,7 @@ const Valores: React.FC = () => {
                             veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo
                             consequat
-                        </h4>
+                        </h5>
                         <br />
                         <p>
                             <strong>Visão: </strong>
