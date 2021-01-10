@@ -1,0 +1,14 @@
+.values {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #F7F7F7;
+}
+
+.values i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10em;
+}

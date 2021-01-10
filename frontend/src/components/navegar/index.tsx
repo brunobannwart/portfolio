@@ -28,10 +28,13 @@ const Navegar: React.FC<Props> = ({
                     <span className='navbar-toggler-icon'></span>
                 </button>
                 <div
-                    className={`${menuFechado ? 'collapse' : ''} navbar-collapse`}
+                    className={`${menuFechado ? 'collapse' : ''} navbar-collapse flex-row-reverse`}
                     id='menu'
                 >
                     <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+                    <li className='nav-item'>
+                            <a className='nav-link' href='/'>Contato</a>
+                        </li>
                         <li className='nav-item'>
                             <a className='nav-link' href='/'>Serviços</a>
                         </li>

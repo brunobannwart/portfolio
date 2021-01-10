@@ -1,3 +1,18 @@
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/all.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/brands.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/brands.min.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/regular.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/regular.min.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/solid.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/solid.min.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/svg-with-js.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/svg-with-js.min.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/v4-shims.css');
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/v4-shims.min.css');
+
 .contact { 
     width: 100%;
     background-color: #395fa9;
@@ -12,6 +27,11 @@
 .contact p {
     font-family: Arial, Helvetica, sans-serif;
     color: #FFF;
+}
+
+.contact p i {
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .contact form textarea {
