@@ -2,7 +2,18 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './portfolio.css';
 
-const Portfolio: React.FC = () => {
+interface StructPortfolio {
+    titulo: string,
+    descrição: string,
+}
+
+interface Props {
+    portfolios: StructPortfolio[],
+}
+
+const Portfolio: React.FC<Props> = ({
+    portfolios
+}) => {
     return (
         <div className='portfolio'>
             <div className='container-fluid text-center'>
@@ -10,30 +21,18 @@ const Portfolio: React.FC = () => {
                 <h5>Nossos principais projetos</h5>
                 <br />
                 <div className='row text-center'>
-                    <div className='col-sm-4'>
-                        <div className='thumbnail'>
-                            <p>
-                                <strong>Projeto</strong>
-                            </p>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                    </div>
-                    <div className='col-sm-4'>
-                        <div className='thumbnail'>
-                            <p>
-                                <strong>Projeto</strong>
-                            </p>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                    </div>
-                    <div className='col-sm-4'>
-                        <div className='thumbnail'>
-                            <p>
-                                <strong>Projeto</strong>
-                            </p>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                    </div>
+                    {portfolios.map(portfolio => {
+                        return (
+                            <div className='col-sm-4'>
+                                <div className='thumbnail'>
+                                    <p>
+                                        <strong>{portfolio.titulo}</strong>
+                                    </p>
+                                    <p>{portfolio.descrição}</p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>

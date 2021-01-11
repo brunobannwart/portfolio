@@ -2,7 +2,19 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './servicos.css';
 
-const Serviços: React.FC = () => {
+interface StructServiço {
+    icone: string,
+    titulo: string,
+    descrição: string,
+}
+
+interface Props {
+    serviços: StructServiço[],
+}
+
+const Serviços: React.FC<Props> = ({
+    serviços,
+}) => {
     return (
         <div id='serviços' className='services'>
             <div className='container-fluid text-center'>
@@ -10,38 +22,15 @@ const Serviços: React.FC = () => {
                 <h5>O que nós oferecemos</h5>
                 <br />
                 <div className='row'>
-                    <div className='col-sm-4'>
-                        <i className='fa fa-tools' />
-                        <h5>Dedicação</h5>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div className='col-sm-4'>
-                        <i className='fa fa-certificate' />
-                        <h5>Qualidade</h5>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div className='col-sm-4'>
-                        <i className='fa fa-clock' />
-                        <h5>Pontualidade</h5>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-                <div className='row'>
-                    <div className='col-sm-4'>
-                        <i className='fa fa-money' />
-                        <h5>Preço justo</h5>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div className='col-sm-4'>
-                        <i className='fa fa-blind' />
-                        <h5>Acessibilidade</h5>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div className='col-sm-4'>
-                        <i className='fa fa-marker' />
-                        <h5>Personalização</h5>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
+                    {serviços.map(serviço => {
+                        return (
+                            <div className='col-sm-4'>
+                                <i className={serviço.icone} />
+                                <h5>{serviço.titulo}</h5>
+                                <p>{serviço.descrição}</p>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>

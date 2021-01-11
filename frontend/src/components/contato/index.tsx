@@ -3,16 +3,17 @@ import { store } from 'react-notifications-component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './contato.css';
 
+interface StructContato {
+    icone: string,
+    legenda: string,
+}
+
 interface Props {
-    telefone: string,
-    emailContato: string,
-    localização: string,
+    contatos: StructContato[],
 }
 
 const Contato: React.FC<Props> = ({
-    telefone,
-    emailContato,
-    localização,
+    contatos,
 }) => {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
@@ -45,9 +46,14 @@ const Contato: React.FC<Props> = ({
                 <h3 className='text-center'>Contato</h3>
                 <div className='row'>
                     <div className='col-sm-5'>
-                        <p><i className='fa fa-map-marker' />{localização}</p>
-                        <p><i className='fa fa-phone' />{telefone}</p>
-                        <p><i className='fa fa-envelope' />{emailContato}</p>
+                        {contatos.map(contato => {
+                            return (
+                                <p>
+                                    <i className={contato.icone} />
+                                    {contato.legenda}
+                                </p>
+                            );
+                        })}
                     </div>
                     <div className='col-sm-7'>
                         <form autoComplete='false' onSubmit={(evento: React.FormEvent) => tratarSubmit(evento)}>
