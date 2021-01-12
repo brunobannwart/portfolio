@@ -1,0 +1,14 @@
+.customers {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #FF9136;
+}
+
+.customers h2, .customers h5 {
+    color: #FFF;
+}
+
+div#lista {
+    padding-top: 10em;
+}

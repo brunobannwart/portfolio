@@ -19,12 +19,7 @@
     padding-top: 1em;
 }
 
-.contact h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #FFF;
-}
-
-.contact p {
+.contact h3, .contact p {
     font-family: Arial, Helvetica, sans-serif;
     color: #FFF;
 }

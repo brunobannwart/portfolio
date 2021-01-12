@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactNotifications from 'react-notifications-component';
 
+import Clientes from './components/clientes';
 import Contato from './components/contato';
 import Navegar from './components/navegar';
 import Portfolio from './components/portfolio';
@@ -46,17 +47,30 @@ const App: React.FC = () => {
         return serviços;
     }
 
+    function obterClientes() {
+        const clientes = [];
+
+        clientes.push({ nome: 'Cliente', avaliação: 'Lorem ipsum dolor sit amet' });
+        clientes.push({ nome: 'Cliente', avaliação: 'Lorem ipsum dolor sit amet' });
+        clientes.push({ nome: 'Cliente', avaliação: 'Lorem ipsum dolor sit amet' });
+
+        return clientes;
+    }
+
     return (
         <>
             <ReactNotifications />
             <Navegar nome='Company' />
             <Sobre />
             <Valores />
-            <Serviços 
+            <Serviços
                 serviços={obterServiços()}
             />
-            <Portfolio 
+            <Portfolio
                 portfolios={obterPortfolio()}
+            />
+            <Clientes 
+                clientes={obterClientes()}
             />
             <Contato
                 contatos={obterContatos()}
